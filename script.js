@@ -1,56 +1,19 @@
-var button = document.getElementById('button');
-var tweet = document.getElementById('tweet');
-var closeBtn = document.getElementById('close');
-var input = document.getElementById('input');
-
-var isOpen = false;
-
-button.addEventListener('click', function(e) {
-    console.log(e.target.children);
-    if (e.target.children.length > 0 && !isOpen) {
-        button.className = "button open-animation";
-        closeBtn.className = "close close-show";
-        input.className = "input close-show";
-        tweet.className = "tweet tweet-open";
-
-        button.style.transitionDelay = "0.3s";
-        closeBtn.style.transitionDelay = "0.3s";
-        input.style.transitionDelay = "0.3s";
-        tweet.style.transitionDelay = "0.3s";
-
-        input.focus();
-        isOpen = true;
+$(document).ready(function () {
+  $(document).on("click", ".continue-btn", function () {
+    if ($(".main").hasClass('hidden')){
+      var hd = new TimelineMax();
+      hd.fromTo($(".revieworder"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.1);
+      hd.fromTo($(".section1"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.2);  
+      hd.fromTo($(".order-summary"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.3);
+      TweenMax.set($(".main"),{className: "-=hidden" });
     }
+  });
+  $(document).on("click", ".backbutton", function(){
+    if (!$(".main").hasClass('hidden')){
+    var hl = new TimelineMax();
+      hl.set($(".main"), { className: "+=hidden" });
+      hl.fromTo($(".revieworder,.section1,.order-summary"), 0.1, {opacity: 1 }, {opacity: 0 });
+    }
+  });
 });
-
-closeBtn.addEventListener('click', function(e) {
-    console.log(!e.target.children);
-    if (e.target.children.length === 0 && isOpen) {
-        button.className = "button close-animation";
-        closeBtn.className = "close close-hide";
-        input.className = "input close-hide";
-        tweet.className = "tweet tweet-hide";
-
-        button.style.transitionDelay = "0.3s";
-        closeBtn.style.transitionDelay = "0.3s";
-        input.style.transitionDelay = "0.3s";
-        tweet.style.transitionDelay = "0.3s";
-
-        isOpen = false;
-    }
-})
-
-tweet.addEventListener('click', function(e) {
-    closeBtn.className = "close close-hide";
-    input.className = "input close-hide";
-    tweet.className = "tweet tweet-hide";
-    button.className = "button close-animation tweet-animation";
-    
-    button.style.transitionDelay = "0s";
-    closeBtn.style.transitionDelay = "0s";
-    input.style.transitionDelay = "0s";
-    tweet.style.transitionDelay = "0s";
-    
-    input.value = "";
-    isOpen = false;
-})
+  
