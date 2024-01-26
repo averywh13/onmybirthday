@@ -1,19 +1,29 @@
-$(document).ready(function () {
-  $(document).on("click", ".continue-btn", function () {
-    if ($(".main").hasClass('hidden')){
-      var hd = new TimelineMax();
-      hd.fromTo($(".revieworder"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.1);
-      hd.fromTo($(".section1"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.2);  
-      hd.fromTo($(".order-summary"), 0.3, { y:20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeOut},.3);
-      TweenMax.set($(".main"),{className: "-=hidden" });
-    }
-  });
-  $(document).on("click", ".backbutton", function(){
-    if (!$(".main").hasClass('hidden')){
-    var hl = new TimelineMax();
-      hl.set($(".main"), { className: "+=hidden" });
-      hl.fromTo($(".revieworder,.section1,.order-summary"), 0.1, {opacity: 1 }, {opacity: 0 });
-    }
-  });
-});
+function year1882() { 
   
+  document.getElementById('response-text').innerText='Christmas tree, Oh Christmas tree! December 22, 1882 was the day that the first christmas tree was lit up by electrric lights.' 
+    document.getElementById('response-date').innerText= 'December 22, 1882' 
+} 
+
+function year1891() {
+
+  document.getElementById('response-text').innerText='first asteroid discovered through astrophotography'
+    document.getElementById('response-date').innerText= 'December 22, 1891'
+} 
+
+function year1978() {
+
+  document.getElementById('response-text').innerText='john wayne gacy confesses to his murders'
+    document.getElementById('response-date').innerText= 'December 22, 1978'
+}
+
+function year2001() {
+
+  document.getElementById('response-text').innerText='...'
+    document.getElementById('response-date').innerText= 'December 22, 2001' 
+}
+
+function year2007() {
+
+  document.getElementById('response-text').innerText='john wayne gacy confesses to his murders'
+    document.getElementById('response-date').innerText= 'December 22, 2007'
+}
