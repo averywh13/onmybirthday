@@ -21,6 +21,6 @@ function year2001() {
 }
 
 function year2007() {
-  document.getElementById('response-text').innerText='December 22, 2007 11:26am, me! I was born! '
+  document.getElementById('response-text').innerText='December 22, 2007 11:26am, me! I was born! The blue-eyed, ginger-haired girl, that was born from two parents with dark hair and dark eyes. Strange...'
     document.getElementById('response-date').innerText= 'December 22, 2007'
 }
