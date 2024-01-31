@@ -23,7 +23,7 @@ function year2001() {
 }
 
 function year2007() {
-  document.getElementById('changeImage').src = 'imgs/baby.PNG'
-  document.getElementById('response-text').innerText='December 22, 2007 11:26am, me! I was born! The blue-eyed, ginger-haired girl, that was born from two parents with dark hair and dark eyes. Hm, strange if you ask me. '
+  document.getElementById('changeImage').src = 'imgs/baby2.png'
+  document.getElementById('response-text').innerText='December 22, 2007 11:26am, me! I was born! The blue-eyed, ginger-haired girl, that was born from two parents with dark hair and dark eyes. I question it too, trust me. '
     document.getElementById('response-date').innerText= 'December 22, 2007'
 }

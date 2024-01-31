@@ -1,6 +1,7 @@
 .body{
   background-color: black;
   color: white;
+  font-family: 'Prata', serif;
 }
 .button{
   width: 150px;
@@ -8,6 +9,9 @@
   margin: 10px;
 }
 img {
-  width: 300px;
- margin-left: 200px;
+  width: 400px;
+  border: 5px solid white;
+}
+footer{
+  margin-top: 300px;
 }
